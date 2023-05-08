@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: skyblue;
+}
+.logo {
+}
+.nav {
+}
+.gnb {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 60px;
+}
+.gnb > li {
+}
+.gnb > li > a {
+    font-size: 18px;
+    color: #222;
+    letter-spacing: -0.3px;
+    font-family: "Noto Sans KR";
+    font-weight: 600;
+}
+.submenu {
+    display: none;
+}
+.submenu li {
+}
+.submenu li a {
+}
+.side-wrap {
+    padding: 18px;
+    background: #f5f9ff;
+    border-radius: 36px;
+}
+.member {
+    display: flex;
+    gap: 0 26px;
+}
+.member li {
+}
+.member li a {
+    font-size: 13px;
+    color: #7e7e7e;
+    font-weight: 700;
+    font-family: "Noto Sans KR";
+}
