@@ -1,7 +1,9 @@
 // 웹브라우저에 html, css, js, image
 // 모두 불러들여서 렌더링 준비가 끝나면
 // 그때 function 의 블럭 안쪽 {} 실행
-window.onload = function () {
+window.addEventListener("load", function () {
+    // 모바일 버튼 기능
+    
     // nav 에 마우스 오버하면 header 높이 260px 변경하기
     // nav 에 마우스 아웃하면 header 높이 100px 변경하기
     // header 를 js 로 저장해 보자(변수 정의해 보자)
@@ -27,4 +29,4 @@ window.onload = function () {
         // class를 제거 한다.
         header.classList.remove("header-active");
     });
-};
+});
