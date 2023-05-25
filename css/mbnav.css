@@ -102,6 +102,8 @@
 .side-menu {
 }
 .side-menu > li {
+    height: 53px;
+    overflow: hidden;
 }
 .side-menu > li > a {
     position: relative;
@@ -121,7 +123,7 @@
 }
 
 .side-menu > li > .submenu {
-    display: none;
+    display: block;
     padding: 15px 20px;
     border-bottom: 1px solid #ddd;
     background-color: #f2f3f5;

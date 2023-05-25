@@ -3,7 +3,7 @@
 // 그때 function 의 블럭 안쪽 {} 실행
 window.addEventListener("load", function () {
     // 모바일 버튼 기능
-    
+
     // nav 에 마우스 오버하면 header 높이 260px 변경하기
     // nav 에 마우스 아웃하면 header 높이 100px 변경하기
     // header 를 js 로 저장해 보자(변수 정의해 보자)
@@ -28,5 +28,27 @@ window.addEventListener("load", function () {
         // header.style.height = "100px";
         // class를 제거 한다.
         header.classList.remove("header-active");
+    });
+    let gnbA = document.querySelectorAll(".gnb > li");
+    let navBlueBar = document.querySelector(".nav-blue-bar");
+
+    let posX = gnbA[0].getBoundingClientRect().left;
+    let widthX = gnbA[0].getBoundingClientRect().width;
+    navBlueBar.style.left = posX + "px";
+    navBlueBar.style.width = widthX + "px";
+    gnbA.forEach((item) => {
+        item.addEventListener("mouseenter", function (event) {
+            let posX = this.getBoundingClientRect().left;
+            let widthX = this.getBoundingClientRect().width;
+            // navBlueBar.style.left = posX + "px";
+            // navBlueBar.style.width = widthX + "px";
+            anime({
+                targets: navBlueBar,
+                left: posX,
+                width: widthX,
+                easing: "easeInOutQuad",
+                duration: 500,
+            });
+        });
     });
 });
