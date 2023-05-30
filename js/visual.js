@@ -6,17 +6,10 @@
 
 window.addEventListener("load", (event) => {
     const swVisualWrap = document.querySelector(".sw-visual .swiper-wrapper");
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener("readystatechange", (event) => {
-        let req = event.target;
-        if (req.readyState === XMLHttpRequest.DONE) {
-            let data = JSON.parse(req.response);
-            makeVisualHtml(data);
-        }
-    });
-    xhr.open("GET", "data/visualdata.json");
-    xhr.send();
-
+    fetch("data/visualdata.json")
+        .then((res) => res.json())
+        .then((result) => makeVisualHtml(result))
+        .catch((err) => console.log(err));
     function makeVisualHtml(_data) {
         let html = ``;
         _data.img.forEach((item) => {
@@ -33,6 +26,10 @@ window.addEventListener("load", (event) => {
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".sw-visual-pg",
+                clickable: true,
             },
         });
     }
