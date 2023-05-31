@@ -51,4 +51,22 @@ window.addEventListener("load", function () {
             });
         });
     });
+    // 스크롤에 의한 position:fixed, relative 교체
+    const visual = this.document.querySelector(".visual");
+    window.addEventListener("scroll", (event) => {
+        // 스크롤 위치값을 파악
+        let scY = this.window.scrollY;
+        // classList.add() 와 remove() 활용
+        if (scY !== 0) {
+            header.classList.add("header-fixed");
+            visual.classList.add("visual-fixed");
+            // 스크롤바가 아래로 조금이라도 이동
+            // position:fixed;
+        } else {
+            header.classList.remove("header-fixed");
+            visual.classList.remove("visual-fixed");
+            // 스크롤바가 최상단에 위치.
+            // position: relative;
+        }
+    });
 });
