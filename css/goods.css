@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     padding: 130px 0;
+    overflow: hidden;
 }
 .goods-menu {
     width: calc(100% - 66.66%);
@@ -18,11 +19,13 @@
     letter-spacing: -0.5px;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 700;
+
     margin-bottom: 40px;
 }
 .goods-title strong {
     color: #0072ff;
 }
+
 .goods-desc {
     font-size: 17px;
     line-height: 1.6;
@@ -31,29 +34,31 @@
     font-weight: 400;
     margin-bottom: 80px;
 }
+
 .goods-list {
 }
 .goods-list li {
 }
 .goods-list li a {
     display: block;
-    font-size: 17px;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 400;
+    font-size: 17px;
     line-height: 1.6;
     color: #777;
 }
 .sw-goods-control {
     display: flex;
     justify-content: flex-start;
-    gap: 0 20px;
     align-items: center;
+    gap: 0 20px;
 }
 .sw-goods-control button {
     border: 0;
     background: transparent;
     cursor: pointer;
 }
+
 .sw-goods-prev {
 }
 .sw-goods-pause {
@@ -63,29 +68,60 @@
 }
 .sw-goods-next {
 }
+
 .goods-slide {
     width: 66.66%;
 }
 .sw-goods {
+    width: calc(100% + 300px);
 }
+
 .good-link {
     display: block;
     padding: 30px;
 }
+
 .good-item {
-    height: 550px;
+    height: 423px;
     overflow: hidden;
     background: #fff;
     border-radius: 22px;
-    box-shadow: 0 6px 31px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+
+    /* height: 550px; */
+    /* box-shadow: 0 6px 31px 2px rgba(0, 0, 0, 0.2); */
 }
 .good-item-img {
+    width: 100%;
+    height: 432px;
+    overflow: hidden;
 }
 .good-item-img img {
+    width: 100%;
+    object-fit: cover;
 }
 .good-item-txt {
+    padding: 30px 20px;
 }
 .good-item-txt p {
+    font-size: 21px;
+    color: #000;
+    font-weight: 700;
+    font-family: "Noto Sans Kr", sans-serif;
 }
 .good-item-txt span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #777;
+    font-family: "Noto Sans Kr", sans-serif;
+}
+
+.sw-goods .swiper-slide-active .good-item {
+    height: 550px;
+    box-shadow: 0 6px 31px 2px rgba(0, 0, 0, 0.2);
+}
+
+.focus {
+    color: red !important;
 }
