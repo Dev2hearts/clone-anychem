@@ -121,14 +121,14 @@
     background-size: cover;
 }
 /* .good-item-img img {
-  
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  object-fit: cover;
-} */
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    object-fit: cover;
+  } */
 
 .good-item-txt {
     padding: 30px 20px;
